@@ -9,7 +9,7 @@
 MFRC522 rfid(SS_PIN, RST_PIN);
 
 // REPLACE WITH YOUR RECEIVER MAC Address
-uint8_t broadcastAddress[] = {0x30, 0xC6, 0xF7, 0x23, 0x31, 0x90};
+uint8_t broadcastAddress[] = {0x40, 0x22, 0xD8, 0xEA, 0x65, 0x2C};//40:22:D8:EA:65:2C
 const char* ssid = "UTY123"; // WiFi yang digunakan untuk mengirim
 const char* password = "07091998"; // Password WiFi
 

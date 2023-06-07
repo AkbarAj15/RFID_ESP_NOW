@@ -49,18 +49,24 @@ void loop() {
     Serial.print("UID MASUK = ");
     Serial.println(myData.uid);
     digitalWrite(s, HIGH); // selenoid akan terbuka
+    delay(2000);
+    digitalWrite(s, LOW);
     digitalWrite(r, HIGH);
     Serial.println("relay menyala");
-    digitalWrite(s, LOW);
+    delay(2000);
     // Turn on the relay by setting the pin to HIGH
   }
   int r1= digitalRead(btn);
   if(r1 == 1){
     digitalWrite(r, LOW);
+    digitalWrite(s, HIGH);
+    delay(2000);
+    digitalWrite(s, LOW);
     Serial.println("button aktif");
     Serial.println("relay mati");
     
     myData.uid[0] = '\0';
     delay(1000);
    }
+   myData.uid[0] = '\0';
 }
